@@ -29,9 +29,9 @@ func _ready() -> void:
 	if parse_result != OK:
 		return
 
-	# Assume KEY has been parsed, it can be accessed either way
-	# Env.get_key("KEY")
-	# OS.get_environment("KEY)
+	# Assume MY_KEY has been parsed, its value can be accessed either way:
+	# Env.get_key("MY_KEY")
+	# OS.get_environment("MY_KEY)
 ```
 
 ## Signals
@@ -50,7 +50,7 @@ signal parsed
 func clear() -> void
 
 ## Loads env file.
-func parse(file_path = DEFAULT_FILE_PATH) -> Error
+func parse(file_path: String) -> Error
 
 ## Gets key from loaded env, returns "" if key is not found.
 func get_key(key: String, default: String = "") -> String
